@@ -1,28 +1,16 @@
-# -*- ruby -*-
+$:.unshift(File.dirname(__FILE__)) unless
+  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
-require 'rubygems'
-require 'hoe'
-require './lib/superators.rb'
+require 'bundler'
+
+Bundler::GemHelper.install_tasks
+
+require 'rspec'
+require 'rspec/core'
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new do |opts|
-  opts.rspec_opts = %w'-c'
+Rspec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern    = "spec/**/*_spec.rb"
+  spec.verbose    = true
+  spec.rspec_opts = ['--color']
 end
-
-desc "Generate a HTML report of the RSpec specs"
-RSpec::Core::RakeTask.new "report" do |opts|
-  opts.rspec_opts = %w'--format html:report.html'
-end
-
-Hoe.spec 'superators' do
-  self.version = Superators::VERSION
-  self.rubyforge_name = 'superators'
-  self.author = 'Jay Phillips'
-  self.email = 'jay -at- codemecca.com'
-  self.summary = 'Superators add new sexy operators to your Ruby objects.'
-  self.description = paragraphs_of('README.txt', 2..4).join("\n\n")
-  self.url = paragraphs_of('README.txt', 0).first.split(/\n/)[-1].strip
-  self.changes = paragraphs_of('History.txt', 0..1).join("\n\n")
-end
-
-# vim: syntax=Ruby
