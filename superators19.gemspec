@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = ["jay@codemecca.com"]
   s.homepage    = "https://github.com/neilconway/superators"
   s.summary     = %q{Superators add new sexy operators to your Ruby objects.}
-  s.description = %q{Superators are a superset of new Ruby operators you can create and use.}
+  s.description = %q{Superators are a superset of new Ruby operators you can create and use. This is a fork of the original superators gem that adds compatibility with MRI 1.9 and other fixes.}
 
   s.add_development_dependency "rspec"
 

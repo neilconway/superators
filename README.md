@@ -1,11 +1,11 @@
-# superators
+# superators19
 
 ### by Jay Phillips
 ### http://jicksta.com
 
 ## DESCRIPTION:
   
-Superators are a superset of new Ruby operators you can create and use.
+Superators are a superset of new Ruby operators you can create and use. This is a fork of the original superators gem that adds compatibility with MRI 1.9 and other fixes.
 
 ## FEATURES/PROBLEMS:
   
@@ -37,8 +37,8 @@ Below is a simple example monkey patch which adds the "<---" operator to all Rub
 
 ## INSTALL:
 
-* sudo gem install superators
-* require 'superators'
+* gem install superators19
+* require 'superators19'
 
 ## LICENSE:
 

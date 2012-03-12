@@ -1,5 +1,11 @@
-== 1.0.0 / 2007-08-14
+== 0.9.3 / 2012-03-12
 
-* 1 major enhancement
-  * Birthday!
+* Minor README tweaks
+* Update changelog (History.txt)
 
+== 0.9.2 / 2012-03-12
+
+* Compatibility with MRI 1.9
+* Optimize superator dispatch slightly (~30% on a microbenchmark)
+* Replace hoe with bundler
+* Incorporates patches from Scott Gonyea
