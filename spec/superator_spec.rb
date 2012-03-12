@@ -1,4 +1,4 @@
-require 'superators'
+require 'superators19'
 
 describe "The 'superator' macro" do
 
